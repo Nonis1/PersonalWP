@@ -75,25 +75,86 @@
             </div>
         </section>
 
-        <section id="cv" class="mb-12">
-            <h3 class="text-2xl font-bold mb-4">קורות חיים</h3>
+       <section id="cv" class="mb-12">
+            <h3 class="text-2xl font-bold mb-4">CV (English)</h3>
             <div class="bg-white rounded-lg shadow-md p-6">
-                <h4 class="text-xl font-semibold mb-3">ינון סנפיר</h4>
-                <p class="mb-4">inon.snapir@gmail.com | 052-6062060 | קיבוץ מעלה החמישה</p>
-                <div x-data="{ activeTab: 'education' }" class="mb-6">
-                    <div class="flex border-b mb-4">
-                        <button @click="activeTab = 'education'" :class="{ 'border-b-2 border-blue-500': activeTab === 'education' }" class="px-4 py-2 font-semibold">השכלה</button>
-                        <button @click="activeTab = 'experience'" :class="{ 'border-b-2 border-blue-500': activeTab === 'experience' }" class="px-4 py-2 font-semibold">ניסיון מקצועי</button>
+                <h4 class="text-xl font-semibold mb-3">Inon Snapir</h4>
+                <p class="mb-4">inon.snapir@gmail.com | 052-6062060 | Kibbutz Ma'ale HaHamisha</p>
+                <div x-data="{ activeTab: 'summary' }" class="mb-6">
+                    <div class="flex flex-wrap border-b mb-4">
+                        <button @click="activeTab = 'summary'" :class="{ 'border-b-2 border-blue-500': activeTab === 'summary' }" class="px-4 py-2 font-semibold">Summary</button>
+                        <button @click="activeTab = 'education'" :class="{ 'border-b-2 border-blue-500': activeTab === 'education' }" class="px-4 py-2 font-semibold">Education</button>
+                        <button @click="activeTab = 'experience'" :class="{ 'border-b-2 border-blue-500': activeTab === 'experience' }" class="px-4 py-2 font-semibold">Professional Experience</button>
+                        <button @click="activeTab = 'other'" :class="{ 'border-b-2 border-blue-500': activeTab === 'other' }" class="px-4 py-2 font-semibold">Other Information</button>
+                    </div>
+                    <div x-show="activeTab === 'summary'" class="space-y-4">
+                        <p>With over 13 years of experience in business processes, including C-level management roles, I have extensive expertise in Information Technology (mainly SAP) and operations management. My background in strategic planning, designing, developing, and implementing organizational Information Systems and Business Applications positions me as a strong candidate for leadership roles. I excel in IT service management and support, effectively aligning technology with business goals, leading large teams, and driving growth-oriented initiatives.</p>
+                        <p>Fluent in Hebrew and English, I bring strong communication skills, a master's degree in engineering, and over 5 years of experience managing large, complex projects and teams in multi-system environments. My expertise includes budget management for large scale projects, and the ability to motivate and guide employees toward collaborative work. My technical acumen and leadership capabilities make me well-suited to drive substantial projects and achieve strategic business objectives.</p>
                     </div>
                     <div x-show="activeTab === 'education'">
-                        <ul class="list-disc list-inside">
-                            <li>2010-2011 אוניברסיטת בר אילן, תואר שני בניהול לוגיסטיקה</li>
-                            <li>2004-2008 מכללת רופין, תואר ראשון בהנדסת תעשייה וניהול</li>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>2010-2011 Bar Ilan University, M.A. in Logistics Management.</li>
+                            <li>2004-2008 Ruppin College, B.Sc in Industrial Engineering and Management.</li>
                         </ul>
                     </div>
-                    <div x-show="activeTab === 'experience'">
-                        <h5 class="font-semibold mb-2">2023-היום: ראש מחלקת SAP במחלקת ה-IT בטמפו משקאות בע"מ (חברה גלובלית)</h5>
-                        <p>בתפקידי כראש מחלקת SAP, אני מוביל צוות של 15 יועצי SAP ומפקח על כל פרויקטי SAP בטמפו משקאות בע"מ. האחריות שלי כוללת את כל מחזור החיים של יישום פרויקטי SAP, מתכנון ראשוני ותכנון אב טיפוס ועד לביצוע ותמיכה.</p>
+                    <div x-show="activeTab === 'experience'" class="space-y-6">
+                        <div>
+                            <h5 class="font-semibold">2023-Present: Head of SAP Division in IT Department at Tempo Beverages Ltd (Global company)</h5>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Lead a team of 15 SAP consultants, overseeing all SAP projects</li>
+                                <li>Implemented robust project management methodology</li>
+                                <li>Ensure strategic alignment of SAP projects with company goals</li>
+                                <li>Lead AI-Powered Innovation initiatives</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2018-2023: VP of Supply Chain and IT manager at Barkan Winery (300 M nis turnover)</h5>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Oversaw entire supply chain and IT operations</li>
+                                <li>Developed and implemented strategic plans</li>
+                                <li>Managed production lines and manufacturing processes</li>
+                                <li>Directed warehousing and distribution operations</li>
+                                <li>Implemented technology solutions to streamline operations</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2014-2018: SAP ERP Consultant at Tempo beverage company</h5>
+                            <p>Implemented SAP ERP solutions, specializing in logistics modules.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2013-2014: Logistics headquarters manager at Tempo beverage company</h5>
+                            <p>Managed internal organizational interfaces and cross-company logistics projects.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2011-2013: Computerized Logistics Center Operations Manager at Tempo beverage company</h5>
+                            <p>Established and implemented new work processes for an innovative system.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2010-2011: Central Distribution Warehouse Manager at Tempo beverage company</h5>
+                            <p>Managed approximately 100 employees using WM method and WMS SAP system.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">2008-2010: Raw Materials and Packaging Warehouse Manager at Tempo beverage company</h5>
+                            <p>Responsible for inventory counts, scheduling receipts, and preparing fill lines.</p>
+                        </div>
+                    </div>
+                    <div x-show="activeTab === 'other'" class="space-y-4">
+                        <div>
+                            <h5 class="font-semibold">Military Service</h5>
+                            <p>IDF, Combat Soldier, Navy. Deputy Commander of a Combat Vessel.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Professional Knowledge</h5>
+                            <p>Knowledge of IT & IS such as the Priority Software, and full control of SAP (MM, WM, EWM, PP, FI). Full proficiency in the Microsoft Office Suite, Microsoft power automate, Microsoft Azure, Microsoft Power BI, salesforce.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Languages</h5>
+                            <p>Hebrew - Native, English - Fluent</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold">Additional Information</h5>
+                            <p>Holder of European citizenship</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +163,7 @@
 
     <footer class="bg-gray-800 text-white py-4 mt-8">
         <div class="container mx-auto text-center">
-            <p>&copy; 2024 ינון שפיר. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 ינון סנפיר. כל הזכויות שמורות.</p>
         </div>
     </footer>
 </body>

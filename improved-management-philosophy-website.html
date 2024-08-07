@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ינון שפיר - תפיסת עולם ניהולית</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Heebo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">ינון שפיר</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#intro" class="hover:text-blue-200">הקדמה</a></li>
+                <li><a href="#philosophy" class="hover:text-blue-200">תפיסת עולם</a></li>
+                <li><a href="#cv" class="hover:text-blue-200">קורות חיים</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-blue-500 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">תפיסת עולם ניהולית</h2>
+            <p class="text-xl">מנהל בכיר עם ניסיון נרחב בתהליכים עסקיים וטכנולוגיית מידע</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section id="intro" class="mb-12">
+            <h3 class="text-2xl font-bold mb-4">הקדמה</h3>
+            <div class="bg-white rounded-lg shadow-md p-6" x-data="{ expanded: false }">
+                <p class="mb-4" x-show="!expanded">שלום, אני ינון שפיר. אני מנהל בכיר עם למעלה מ-13 שנות ניסיון בתהליכים עסקיים, כולל תפקידי ניהול ברמת C...</p>
+                <p class="mb-4" x-show="expanded">שלום, אני ינון שפיר. אני מנהל בכיר עם למעלה מ-13 שנות ניסיון בתהליכים עסקיים, כולל תפקידי ניהול ברמת C. יש לי מומחיות נרחבת בטכנולוגיית מידע (בעיקר SAP) וניהול תפעול. הרקע שלי בתכנון אסטרטגי, תכנון, פיתוח ויישום של מערכות מידע ארגוניות ויישומים עסקיים ממצב אותי כמועמד חזק לתפקידי מנהיגות.</p>
+                <button @click="expanded = !expanded" class="text-blue-500 hover:text-blue-700" x-text="expanded ? 'הצג פחות' : 'הצג עוד'"></button>
+            </div>
+        </section>
+
+        <section id="philosophy" class="mb-12">
+            <h3 class="text-2xl font-bold mb-4">תפיסת עולם ניהולית</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-semibold mb-3">חזון וערכים</h4>
+                    <p>אני מאמין כי ניהול אפקטיבי מתחיל בחזון ברור ובמערכת ערכים מוצקה. החזון שלי הוא להפוך את הארגון למוביל עולמי בשימוש בטכנולוגיה. ערכי המפתח שמנחים אותי הם: חדשנות, יושרה, שקיפות ומצוינות.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-semibold mb-3">מנהיגות מעצבת</h4>
+                    <p>אני דוגל בסגנון מנהיגות מעצב, המתמקד בהעצמת עובדים, טיפוח יצירתיות וקידום למידה מתמדת. אני מאמין כי תפקידי כמנהל הוא ליצור סביבה המאפשרת לכל עובד לממש את מלוא הפוטנציאל שלו.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="mb-12">
+            <h3 class="text-2xl font-bold mb-4">קורות חיים</h3>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h4 class="text-xl font-semibold mb-3">ינון שפיר</h4>
+                <p class="mb-4">inon.snapir@gmail.com | 052-6062060 | קיבוץ מעלה החמישה</p>
+                <div x-data="{ activeTab: 'education' }" class="mb-6">
+                    <div class="flex border-b mb-4">
+                        <button @click="activeTab = 'education'" :class="{ 'border-b-2 border-blue-500': activeTab === 'education' }" class="px-4 py-2 font-semibold">השכלה</button>
+                        <button @click="activeTab = 'experience'" :class="{ 'border-b-2 border-blue-500': activeTab === 'experience' }" class="px-4 py-2 font-semibold">ניסיון מקצועי</button>
+                    </div>
+                    <div x-show="activeTab === 'education'">
+                        <ul class="list-disc list-inside">
+                            <li>2010-2011 אוניברסיטת בר אילן, תואר שני בניהול לוגיסטיקה</li>
+                            <li>2004-2008 מכללת רופין, תואר ראשון בהנדסת תעשייה וניהול</li>
+                        </ul>
+                    </div>
+                    <div x-show="activeTab === 'experience'">
+                        <h5 class="font-semibold mb-2">2023-היום: ראש מחלקת SAP במחלקת ה-IT בטמפו משקאות בע"מ (חברה גלובלית)</h5>
+                        <p>בתפקידי כראש מחלקת SAP, אני מוביל צוות של 15 יועצי SAP ומפקח על כל פרויקטי SAP בטמפו משקאות בע"מ. האחריות שלי כוללת את כל מחזור החיים של יישום פרויקטי SAP, מתכנון ראשוני ותכנון אב טיפוס ועד לביצוע ותמיכה.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ינון שפיר. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+</html>
